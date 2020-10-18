@@ -18,11 +18,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "emitDecoratorMetadata": true,
+    "importHelpers": true,
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "noEmit": true,
     "jsx": "react",
-    "outDir": "dist"
+    "outDir": "dist",
+    "noFallthroughCasesInSwitch": true
   },
   "typeRoots": [
     "node_modules/@types",

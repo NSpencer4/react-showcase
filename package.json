@@ -32,7 +32,7 @@
     "node-sass": "^4.14.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "react-scripts": "3.4.3",
+    "react-scripts": "^4.0.0-next.98",
     "typescript": "^3.9.7"
   },
   "devDependencies": {
@@ -41,7 +41,7 @@
     "@typescript-eslint/eslint-plugin": "^4.4.1",
     "@typescript-eslint/parser": "^4.4.1",
     "cross-env": "^7.0.2",
-    "eslint": "^6.6.0",
+    "eslint": "^7.9.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-airbnb-typescript": "^12.0.0",
     "eslint-config-prettier": "^6.13.0",
@@ -54,6 +54,6 @@
     "html-webpack-plugin": "^4.5.0",
     "prettier": "^2.1.2",
     "uglifyjs-webpack-plugin": "^2.2.0",
-    "webpack": "4.42.0"
+    "webpack": "4.44.1"
   }
 }
