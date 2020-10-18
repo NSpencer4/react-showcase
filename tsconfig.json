@@ -19,6 +19,7 @@
     "isolatedModules": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
+    "noImplicitAny": true,
     "noEmit": true,
     "jsx": "react",
     "outDir": "dist"
