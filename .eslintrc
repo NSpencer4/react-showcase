@@ -69,7 +69,7 @@
 		"jest/no-identical-title": 2,
 		"jest/prefer-to-have-length": 1,
 		"jest/valid-expect": 2,
-		"no-use-before-define": 0,
-		"@typescript-eslint/no-use-before-define": 2
+		"no-use-before-define": 1,
+		"@typescript-eslint/no-use-before-define": 1
 	}
 }
