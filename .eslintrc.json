@@ -42,10 +42,6 @@
     "browser": true,
     "jest": true
   },
-  "globals": {
-    "Atomics": "readonly",
-    "SharedArrayBuffer": "readonly"
-  },
   "rules": {
     "react/jsx-boolean-value": 2,
     "react/jsx-no-undef": 2,

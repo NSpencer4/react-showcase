@@ -1,0 +1,5 @@
+@mixin style-for($viewPixels) {
+  @media (max-width: #{$viewPixels}) {
+    @content;
+  }
+}
