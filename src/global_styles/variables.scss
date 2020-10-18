@@ -6,6 +6,17 @@ $bp-xl: 1200px;
 
 //Primary Colors
 $blue: #00538c;
-$green: #00538c;
-$black: #2c2a2a;
+$green: #5fb061;
+$black: #373B3C;
 $white: #ffffff;
+
+//Secondary Colors
+$light-grey: #e3e3e3;
+
+// Fonts
+$font-weight-map: (
+        light           :   300,
+        regular         :   400,
+        bold            :   600,
+);
+$primary-font-family: Lato,Georgia,Times,serif;

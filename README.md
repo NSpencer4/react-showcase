@@ -8,8 +8,9 @@ See: https://github.com/NSpencer4/product-picker-service-poc for the backend com
 ## TODO List
 - [x] Create a new React project using Bootstrap Grid and SASS
 - [x] Setup linting rules and configure tsconfig
+- [x] Demonstrate React Context API
 - [ ] Stub out a Product Picker page comprised of reusable components
-- [ ] Init singleton config
+- [x] Init singleton config
 - [ ] Fetch the application config from API
 - [ ] Migrate all text constants to I18n
 - [ ] Achieve 100% unit test coverage
