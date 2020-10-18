@@ -2,6 +2,7 @@ import * as React from "react";
 import productPickerLogo from "../../logo.svg";
 import roundupLogo from "../../roundup-logo.png";
 
+// eslint-disable-next-line react/prefer-stateless-function
 class Header extends React.Component {
   render() {
     return (
