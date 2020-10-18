@@ -14,10 +14,14 @@
     "forceConsistentCasingInFileNames": true,
     "module": "esnext",
     "moduleResolution": "node",
+    "sourceMap": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "outDir": "dist"
   },
   "typeRoots": [
     "node_modules/@types",
@@ -25,5 +29,8 @@
   ],
   "include": [
     "src"
+  ],
+  "exclude": [
+    "dist"
   ]
 }
