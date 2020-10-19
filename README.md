@@ -8,11 +8,13 @@ See: https://github.com/NSpencer4/product-picker-service-poc for the backend com
 ## TODO List
 - [x] Create a new React project using Bootstrap Grid and SASS
 - [x] Setup linting rules and configure tsconfig
-- [x] Demonstrate React Context API
-- [ ] Stub out a Product Picker page comprised of reusable components
+- [x] Demonstrate React Context API (for low frequency state updates)
 - [x] Init singleton config
+- [ ] Stub out a Product Picker page comprised of reusable components
 - [ ] Fetch the application config from API
 - [ ] Migrate all text constants to I18n
-- [ ] Achieve 100% unit test coverage
+- [ ] Demonstrate Hooks
+- [ ] Demonstrate Error Boundary fallback components
+- [ ] Achieve 100% unit test coverage using Enzyme
 - [ ] Introduce Redux (overkill for this use case but for learning purposes)
 - [ ] Create a GraphQL service layer to interact with the Spring-Boot + GraphQL API
