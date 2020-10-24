@@ -2,21 +2,20 @@ import React from "react";
 import "./ProductPicker.scss";
 import ConfigContext from "../../context/ConfigContext";
 
-// eslint-disable-next-line react/prefer-stateless-function
-class ProductPicker extends React.Component {
-  static configContext = ConfigContext;
-
+class ProductPicker extends React.PureComponent {
   componentDidMount(): void {
-    console.log(ProductPicker.configContext);
+    console.log(this.context);
   }
 
   render(): JSX.Element {
     return (
       <section id="product-picker-wrapper">
-        <h1>test</h1>
+        <h1>Body</h1>
       </section>
     );
   }
 }
+
+ProductPicker.contextType = ConfigContext;
 
 export default ProductPicker;
