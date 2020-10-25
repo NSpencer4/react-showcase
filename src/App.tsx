@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import ProductPicker from "./components/ProductPicker/ProductPicker";
+import ProductPicker from "./pages/ProductPicker/ProductPicker";
 import ConfigContext from "./context/ConfigContext";
 import ConfigConstants from "./constants/config.constants";
 
