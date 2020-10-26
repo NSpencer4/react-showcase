@@ -22,7 +22,7 @@ class ProductPicker extends React.PureComponent<{}, ProductPickerState> {
     return (
       <section id="product-picker-wrapper">
         <div className="row">
-          <div className="col-2">
+          <div className="col-12">
             <ProductPickerTile
               name={productData[0].name}
               imageUrl={productData[0].imageUrl}
