@@ -1,0 +1,9 @@
+@mixin style-for($viewPixels) {
+  @media (max-width: #{$viewPixels}) {
+    @content;
+  }
+}
+
+@mixin font($font-weight: regular) {
+  font-weight: map-get($map: $font-weight-map, $key: $font-weight);
+}
