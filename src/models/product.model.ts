@@ -1,7 +1,10 @@
 class Product {
   name: string;
+
   imageUrl: string;
+
   usages: string[];
+
   performance: {
     rainproof: string;
     visibleResults: string;

@@ -22,19 +22,32 @@
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "noEmit": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "outDir": "dist",
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "declaration": true
   },
   "typeRoots": [
     "node_modules/@types",
-    "node_modules"
+    "node_modules",
+    "src/global.d.ts"
+  ],
+  "rootDirs": [
+    "src",
+    "stories"
   ],
   "include": [
+    "next-env.d.ts",
     "src/**/*.ts",
     "src/**/*.tsx"
   ],
   "exclude": [
-    "dist"
+    "dist",
+    "out",
+    "node_modules"
   ]
 }

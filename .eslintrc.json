@@ -4,17 +4,25 @@
         "jest": true
     },
     "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
         "airbnb-typescript",
-        "airbnb/hooks",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:jest/recommended",
-        "prettier",
-        "prettier/react",
-        "prettier/@typescript-eslint",
-        "plugin:prettier/recommended"
+        "plugin:jsx-a11y/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:@typescript-eslint/recommended"
     ],
+    "plugins": [
+        "import",
+        "jsx-a11y",
+        "jest",
+        "@typescript-eslint",
+        "react",
+        "react-hooks"
+    ],
+    "globals": {
+        "React": true,
+        "JSX": true,
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
@@ -38,32 +46,76 @@
         "sourceType": "module",
         "project": "./tsconfig.json"
     },
-    "plugins": [
-        "react",
-        "@typescript-eslint",
-        "prettier"
-    ],
     "rules": {
-        "react/jsx-boolean-value": 2,
-        "react/jsx-no-undef": 2,
-        "react/jsx-sort-props": 0,
-        "react/jsx-sort-prop-types": 0,
-        "react/jsx-uses-react": 2,
-        "react/jsx-uses-vars": 2,
-        "react/no-did-mount-set-state": 2,
-        "react/no-did-update-set-state": 2,
-        "react/no-multi-comp": 2,
-        "react/no-unknown-property": 1,
-        "react/prop-types": 1,
-        "react/react-in-jsx-scope": 2,
-        "react/self-closing-comp": 2,
-        "react/wrap-multilines": 0,
-        "react/prefer-stateless-function": 1,
-        "jest/no-disabled-tests": 1,
-        "jest/no-focused-tests": 2,
-        "jest/no-identical-title": 2,
-        "jest/prefer-to-have-length": 1,
-        "jest/valid-expect": 2,
-        "@typescript-eslint/lines-between-class-members": 0
-    }
+        "linebreak-style": 0,
+        "spaced-comment": 0,
+        "no-return-assign": 0,
+        "react/forbid-prop-types": 0,
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "import/no-extraneous-dependencies": "off",
+        "no-use-before-define": "off",
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+        "@typescript-eslint/no-use-before-define": [
+            "error",
+            {
+                "functions": false
+            }
+        ],
+        "react/jsx-filename-extension": [
+            1,
+            {
+                "extensions": [
+                    ".ts",
+                    ".tsx"
+                ]
+            }
+        ],
+        "no-plusplus": [
+            "error",
+            {
+                "allowForLoopAfterthoughts": true
+            }
+        ],
+        "no-else-return": [
+            "error",
+            {
+                "allowElseIf": true
+            }
+        ],
+        "no-console": "warn",
+        "react/button-has-type": 0,
+        "react/jsx-props-no-spreading": [
+            0
+        ],
+        "import/prefer-default-export": 0,
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": ["error"],
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-no-undef": [1 , { "allowGlobals": true }],
+        "react/prop-types": [1, { "skipUndeclared": true }],
+        "react/no-unescaped-entities": ["error", { "forbid": [">", "}"] }],
+        "jsx-a11y/anchor-is-valid": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "jsx-a11y/no-static-element-interactions": "off",
+        "@typescript-eslint/comma-dangle": 0
+    },
+    "settings": {
+        "import/resolver": {
+            "node": {
+                "extensions": [".ts", ".tsx", ".js"],
+                "moduleDirectory": ["node_modules", "src"]
+            }
+        }
+    },
+    "ignorePatterns": [
+        "jest.config.js"
+    ]
 }
