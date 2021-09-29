@@ -22,7 +22,7 @@
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "noEmit": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "outDir": "dist",
     "noFallthroughCasesInSwitch": true,
     "noImplicitThis": true,
