@@ -1,10 +1,19 @@
 import React, { ChangeEvent, FormEvent, useCallback, useEffect, useState } from 'react';
 import _ from 'lodash';
-import { useDebounce } from '../../shared/hooks/UseDebounce';
+// import { useDebounce } from '../../shared/hooks/UseDebounce';
 
 export const Search = (): JSX.Element => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [results, setResults] = useState<Response>();
+  const [results, setResults] = useState<any[]>();
+  const [typeaheadResults, setTypeaheadResults] = useState<any[]>();
+
+  // Generate typeahead results
+  useEffect(() => {
+    if (searchTerm.length > 2) {
+      const filteredResults = (results || []).filter((result) => result.make.toLowerCase().indexOf(searchTerm.toLowerCase()) !== -1);
+      setTypeaheadResults(filteredResults);
+    }
+  }, [results, searchTerm]);
 
   /**
    * Functions in functional components get redefined every time the component rerenders.
@@ -23,21 +32,23 @@ export const Search = (): JSX.Element => {
 
       fetch('/mock-data/search-data.json', reqDetails)
         .then((response: Response) => response.json())
-        .then((data: Response) => setResults(data));
+        .then((data: any) => setResults(data.hits));
     }, 500),
     []);
 
   /**
    * Alternatively, we can use a custom hook to debounce the time if we don't want to use lodash
    */
-  const debouncedSearchTerm = useDebounce(searchTerm, 500);
-  useEffect(() => {
-    console.log(debouncedSearchTerm);
-  }, [debouncedSearchTerm]);
+  // const debouncedSearchTerm = useDebounce(searchTerm, 500);
+  // useEffect(() => {
+  //   console.log(debouncedSearchTerm);
+  // }, [debouncedSearchTerm]);
 
   const handleSearchTermChange = (term: string) => {
     setSearchTerm(term);
-    fetchSearchResults(term);
+    if (searchTerm.length > 2) {
+      fetchSearchResults(term);
+    }
   };
 
   const submitSearch = (event: FormEvent<HTMLFormElement>) => {
@@ -52,7 +63,12 @@ export const Search = (): JSX.Element => {
                onChange={(e: ChangeEvent<HTMLInputElement>) => (handleSearchTermChange(e.target.value))}/>
         <input type="submit"/>
       </form>
-      <code>{JSON.stringify(results)}</code>
+      <ul>
+        {(typeaheadResults || []).map((item) => {
+          return <li key={item.id}>{item.make}</li>;
+        })}
+      </ul>
+      {/*<code>{JSON.stringify(results)}</code>*/}
     </section>
   );
 };
