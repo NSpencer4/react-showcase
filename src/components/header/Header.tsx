@@ -9,7 +9,7 @@ export const Header = (): JSX.Element => {
   return (
     <header className="row align-items-center">
       <div className="col-12">
-        <h1>Product Picker</h1>
+        <h1>Sandbox</h1>
       </div>
       {/*<pre>{JSON.stringify(state)}</pre>*/}
     </header>
